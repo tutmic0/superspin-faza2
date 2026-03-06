@@ -10,8 +10,7 @@ export const signInWithTwitter = async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'twitter',
     options: {
-      redirectTo: `${window.location.origin}/auth/callback`
-    }
+    redirectTo: `https://superspin.online/auth/callback`    }
   })
   if (error) console.error(error)
 }
